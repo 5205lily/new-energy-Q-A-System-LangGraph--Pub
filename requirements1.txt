@@ -1,0 +1,21 @@
+# FastAPI 后端
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.17
+
+# LangGraph 核心
+langgraph>=0.2.0
+langgraph-checkpoint-sqlite>=2.0.0
+
+# LangChain 生态
+langchain-openai>=0.2.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+
+# 向量数据库（根据实际使用选择其一）
+# chromadb>=0.5.0
+# pgvector>=0.2.0
+
+# 其他依赖
+python-dotenv>=1.0.0
+pydantic>=2.9.0

@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer components {
+  .agent-badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-calc {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .badge-chart {
+    @apply bg-purple-100 text-purple-700;
+  }
+
+  .badge-hitl {
+    @apply bg-amber-100 text-amber-700;
+  }
+
+  .badge-ok {
+    @apply bg-green-100 text-green-700;
+  }
+
+  .source-card {
+    @apply border border-gray-200 rounded-lg p-3 bg-gray-50/50 transition-all hover:border-blue-400 hover:bg-blue-50/50;
+  }
+
+  .reasoning-box {
+    @apply bg-gradient-to-r from-slate-50 to-gray-50 border-l-3 border-blue-500 px-4 py-3 my-2 rounded-r-lg font-mono text-xs text-slate-600 whitespace-pre-wrap leading-relaxed;
+  }
+
+  .upload-zone {
+    @apply border-2 border-dashed border-gray-300 rounded-xl p-6 text-center transition-all cursor-pointer hover:border-blue-400 hover:bg-blue-50;
+  }
+
+  .upload-zone.dragover {
+    @apply border-blue-400 bg-blue-50;
+  }
+
+  .msg-anim {
+    @apply animate-slide-up;
+  }
+
+  .typing-cursor::after {
+    content: '|';
+    @apply text-blue-500 animate-blink;
+  }
+
+  .dot-flashing {
+    @apply relative w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse-dot;
+  }
+
+  .dot-flashing::before,
+  .dot-flashing::after {
+    content: '';
+    @apply absolute w-1.5 h-1.5 rounded-full bg-blue-500;
+  }
+
+  .dot-flashing::before {
+    @apply -left-2.5 animate-pulse-dot;
+    animation-delay: 0s;
+  }
+
+  .dot-flashing::after {
+    @apply left-2.5 animate-pulse-dot;
+    animation-delay: 1s;
+  }
+}
+
+@layer utilities {
+  .border-l-3 {
+    border-left-width: 3px;
+  }
+}

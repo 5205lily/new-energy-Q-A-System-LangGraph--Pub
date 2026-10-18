@@ -1,0 +1,8 @@
+langchain==0.2.11
+langchain-community==0.2.10
+chromadb==0.5.3
+sentence-transformers==2.7.0
+pypdf==4.3.1
+python-docx==1.1.2
+openai==1.37.1
+python-dotenv==1.0.1
